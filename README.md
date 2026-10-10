@@ -2,6 +2,8 @@
 
 A Python client for the [55Tech](https://oddspapi.io) REST and WebSocket APIs.
 
+Unofficial: not affiliated with or endorsed by 55Tech.
+
 ```sh
 pip install 55tech
 ```
