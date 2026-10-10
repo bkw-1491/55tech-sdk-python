@@ -1,0 +1,60 @@
+[project]
+name = "55tech"
+version = "0.1.0"
+description = "Python client for the 55Tech REST and WebSocket APIs"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "brandon-betdex", email = "brandon@betdex.com" }
+]
+requires-python = ">=3.10"
+keywords = ["55tech", "odds", "betting", "bookmaker", "api", "sdk"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "requests>=2.28",
+    "websocket-client>=1.6",
+    "zstandard>=0.22",
+]
+
+[project.urls]
+Homepage = "https://oddspapi.io"
+Documentation = "https://docs.oddspapi.io"
+Repository = "https://github.com/brandon-betdex/55tech-sdk-python"
+Issues = "https://github.com/brandon-betdex/55tech-sdk-python/issues"
+
+[tool.uv.build-backend]
+module-name = "fiftyfivetech"
+
+[build-system]
+requires = ["uv_build>=0.8.9,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.400",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.4",
+    "ruff>=0.16.10",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
